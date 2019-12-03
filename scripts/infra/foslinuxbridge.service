@@ -1,0 +1,19 @@
+
+[unit]
+Description = Eclipse fog05 Linux Bridge Plugin
+After=network.target
+
+
+[Service]
+Type=simple
+PIDFile=/var/fos/linuxbridgep.pid
+ExecStart = /etc/fos/plugins/plugin-net-linuxbridge/linuxbridge_plugin /etc/fos/plugins/plugin-net-linuxbridge/linuxbridge_plugin.json
+KillMode=process
+Restart=on-failure
+User=fos
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=fos_linuxbridge
+[Install]
+WantedBy=multi-user.target
+Alias=foslinuxbridge.service

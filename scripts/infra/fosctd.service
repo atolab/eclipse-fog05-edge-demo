@@ -1,0 +1,19 @@
+
+[unit]
+Description = Eclipse fog05 Containerd Plugin
+After=network.target
+
+
+[Service]
+Type=simple
+PIDFile=/var/fos/ctd.pid
+ExecStart = /etc/fos/plugins/plugin-fdu-containerd/plugin /etc/fos/plugins/plugin-fdu-containerd/etc/containerd_plugin.json
+KillMode=process
+Restart=on-failure
+User=fos
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=fos_ctd
+[Install]
+WantedBy=multi-user.target
+Alias=fosctd.service

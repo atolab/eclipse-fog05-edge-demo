@@ -1,0 +1,44 @@
+{
+    "id": "lxd-gw",
+    "name": "gateway",
+    "computation_requirements": {
+        "cpu_arch": "aarch64",
+        "cpu_min_freq": 0,
+        "cpu_min_count": 1,
+        "ram_size_mb": 512.0,
+        "storage_size_gb": 5.0
+    },
+    "image": {
+        "uri": "file:///home/ubuntu/eclipse_demo/gw-arm64.tar.gz",
+        "checksum": "21fbf431e1b98e0554adf3407f0c3597dbeb9031fca29eb5e6f2357a7d92aeff",
+        "format": "tar.gz"
+    },
+    "storage": [],
+    "hypervisor": "LXD",
+    "migration_kind": "COLD",
+    "interfaces": [
+        {
+            "name": "eth0",
+            "is_mgmt": false,
+            "if_type": "INTERNAL",
+            "virtual_interface": {
+                "intf_type": "BRIDGED",
+                "vpci": "lxdbr0",
+                "bandwidth": 10
+            }
+        },
+        {
+            "name": "eth1",
+            "is_mgmt": false,
+            "if_type": "INTERNAL",
+            "virtual_interface": {
+                "intf_type": "BRIDGED",
+                "vpci": "br-demo",
+                "bandwidth": 10
+            }
+        }
+    ],
+    "io_ports": [],
+    "connection_points": [],
+    "depends_on": []
+}

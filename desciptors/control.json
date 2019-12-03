@@ -1,0 +1,33 @@
+{
+    "id": "docker-control",
+    "name": "control-server",
+    "computation_requirements": {
+        "cpu_arch": "x86_64",
+        "cpu_min_freq": 0,
+        "cpu_min_count": 1,
+        "ram_size_mb": 128.0,
+        "storage_size_gb": 5.0
+    },
+    "image": {
+        "uri": "docker.io/fog05/edge-demo:latest",
+        "checksum": "",
+        "format": ""
+    },
+    "storage": [],
+    "hypervisor": "DOCKER",
+    "migration_kind": "COLD",
+    "interfaces": [{
+        "name": "eth0",
+        "is_mgmt": false,
+        "if_type": "EXTERNAL",
+        "mac_address":"be:ef:be:ef:00:10",
+        "virtual_interface": {
+            "intf_type": "BRIDGED",
+            "vpci": "br-demo",
+            "bandwidth": 10
+        }
+    }],
+    "io_ports": [],
+    "connection_points": [],
+    "depends_on": []
+}

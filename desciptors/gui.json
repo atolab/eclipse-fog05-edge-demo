@@ -1,0 +1,33 @@
+{
+    "id": "lxd-gui",
+    "name": "control-gui",
+    "computation_requirements": {
+        "cpu_arch": "aarch64",
+        "cpu_min_freq": 0,
+        "cpu_min_count": 1,
+        "ram_size_mb": 128.0,
+        "storage_size_gb": 5.0
+    },
+    "image": {
+        "uri": "file:///home/ubuntu/eclipse_demo/web-arm64.tar.gz",
+        "checksum": "edf75d18d29a932684d095f65c744f5e53b3dfa33fe1cffe296a0be8d363221a",
+        "format": "tar.gz"
+    },
+    "storage": [],
+    "hypervisor": "LXD",
+    "migration_kind": "COLD",
+    "interfaces": [{
+        "name": "eth0",
+        "is_mgmt": false,
+        "if_type": "EXTERNAL",
+        "mac_address":"be:ef:be:ef:00:20",
+        "virtual_interface": {
+            "intf_type": "BRIDGED",
+            "vpci": "br-demo",
+            "bandwidth": 10
+        }
+    }],
+    "io_ports": [],
+    "connection_points": [],
+    "depends_on": []
+}

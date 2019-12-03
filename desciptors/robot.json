@@ -1,0 +1,22 @@
+{
+    "id": "robot-app",
+    "name": "robot-client",
+    "computation_requirements": {
+        "cpu_arch": "aarch64",
+        "cpu_min_freq": 0,
+        "cpu_min_count": 1,
+        "ram_size_mb": 128.0,
+        "storage_size_gb": 2.0
+    },
+    "command": {
+        "binary": "/home/ubuntu/demo/robot.sh",
+        "args": []
+    },
+    "storage": [],
+    "hypervisor": "BARE",
+    "migration_kind": "COLD",
+    "interfaces": [],
+    "io_ports": [],
+    "connection_points": [],
+    "depends_on": []
+}

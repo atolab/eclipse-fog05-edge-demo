@@ -1,0 +1,18 @@
+[unit]
+Description = Eclipse fog05 Agent
+After=yaks.target
+
+
+[Service]
+Type=simple
+PIDFile=/var/fos/yaksd.pid
+ExecStart = /etc/fos/yaksd
+KillMode=process
+Restart=on-failure
+User=fos
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=yaks
+[Install]
+WantedBy=multi-user.target
+Alias=yaks.service

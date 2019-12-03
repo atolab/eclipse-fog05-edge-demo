@@ -1,0 +1,19 @@
+
+[unit]
+Description = Eclipse fog05 LXD Plugin
+After=network.target
+
+
+[Service]
+Type=simple
+PIDFile=/var/fos/lxd.pid
+ExecStart = /etc/fos/plugins/plugin-fdu-lxd/LXD_plugin /etc/fos/plugins/plugin-fdu-lxd/LXD_plugin.json
+KillMode=process
+Restart=on-failure
+User=fos
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=fos_lxd
+[Install]
+WantedBy=multi-user.target
+Alias=foslxd.service

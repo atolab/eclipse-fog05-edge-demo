@@ -1,0 +1,11 @@
+auto eth0
+iface eth0 inet manual
+
+auto br0
+iface br0 inet static
+        address 172.16.123.2
+	netmask 255.255.255.0
+	gateway 172.16.123.1
+	bridge-ports eth0 wlxf4ec38e886ad
+
+hostname ap

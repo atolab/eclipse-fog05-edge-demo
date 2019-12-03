@@ -1,0 +1,3 @@
+[submodule "ros2/teleop_yaks"]
+	path = ros2/teleop_yaks
+	url = https://github.com/atolab/teleop_yaks

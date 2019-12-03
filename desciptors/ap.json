@@ -1,0 +1,44 @@
+{
+    "id": "lxd-ap",
+    "name": "access-point",
+    "computation_requirements": {
+        "cpu_arch": "x86_64",
+        "cpu_min_freq": 0,
+        "cpu_min_count": 1,
+        "ram_size_mb": 128.0,
+        "storage_size_gb": 2.0
+    },
+    "image": {
+        "uri": "file:///home/ato/eclipse_demo/ap-x86.tar.gz",
+        "checksum": "90eb9e018eb2755e0fd241a7f80c4f25a0f94000ed8c31ae639c4da6552ad1b0",
+        "format": "tar.gz"
+    },
+    "storage": [],
+    "hypervisor": "LXD",
+    "migration_kind": "COLD",
+    "interfaces": [
+        {
+            "name": "eth0",
+            "is_mgmt": false,
+            "if_type": "EXTERNAL",
+            "virtual_interface": {
+                "intf_type": "BRIDGED",
+                "vpci": "br-demo",
+                "bandwidth": 10
+            }
+        },
+        {
+            "name": "wlxf4ec38e886ad",
+            "is_mgmt": false,
+            "if_type": "EXTERNAL",
+            "virtual_interface": {
+                "intf_type": "PHYSICAL",
+                "vpci": "wlxf4ec38e886ad",
+                "bandwidth": 10
+            }
+        }
+    ],
+    "io_ports": [],
+    "connection_points": [],
+    "depends_on": []
+}
